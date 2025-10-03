@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="max-w-2xl mx-auto text-center space-y-6">
@@ -9,18 +10,18 @@ export default function Home() {
       </p>
 
       <div className="flex justify-center gap-4">
-        <a
-          href="/translator"
+        <Link
+          to="/translator"
           className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
         >
           Open Translator
-        </a>
-        <a
-          href="/random"
+        </Link>
+        <Link
+          to="/random"
           className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
         >
           Open Random String
-        </a>
+        </Link>
       </div>
     </div>
   );
