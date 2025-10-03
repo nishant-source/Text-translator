@@ -5,8 +5,6 @@ A small React + Vite project that includes:
 - **Text Translator** — Translate text between multiple languages using RapidAPI.
 - **Random String Generator** — Generate random strings with customizable length and character set.
 
-**Live Demo:** [https://text-translation-live.netlify.app/](https://text-translation-live.netlify.app/)
-
 ---
 
 ## Features
