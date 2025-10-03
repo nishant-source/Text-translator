@@ -1,47 +1,70 @@
 # My Frontend Project (Translator + Random String)
 
-This is a small React + Vite project that includes:
+A small React + Vite project that includes:
 
-- **Text Translator** — translate text between multiple languages using RapidAPI.
-- **Random String Generator** — generate random strings with configurable length and character set.
+- **Text Translator** — Translate text between multiple languages using RapidAPI.
+- **Random String Generator** — Generate random strings with customizable length and character set.
 
-You can see it live here: [https://text-translation-live.netlify.app/](https://text-translation-live.netlify.app/)
+**Live Demo:** [https://text-translation-live.netlify.app/](https://text-translation-live.netlify.app/)
 
 ---
 
-## Run Locally
+## Features
 
-1. Clone the repository:
+- React (Vite) frontend
+- Tailwind CSS for styling
+- React Router DOM for page navigation
+- RapidAPI integration for text translation
+- SPA routing configured for Netlify
+
+---
+
+## Getting Started (Run Locally)
+
+1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/nishant-source/Text-translator.git
-cd Text-translator
+cd Text-translator 
+```
+
 Install dependencies:
 
+```bash
 npm install
-Create a .env file from .env.example and add your RapidAPI credentials:
+```
 
+Create a .env file based on .env.example and add your RapidAPI credentials:
+
+```bash
 VITE_RAPIDAPI_KEY=your_rapidapi_key_here
 VITE_RAPIDAPI_HOST=text-translator2.p.rapidapi.com
-If you don’t set these, the translator will run in demo mode (UI works, but translations are fake).
+```
+If you don’t set these, the translator will run in demo mode (UI works but translations are fake).
+
 
 Start the development server:
 
+```bash
 npm run dev
-What I Used
-React (with Vite)
+Open http://localhost:5173 in your browser.
+```
 
-Tailwind CSS
+# Important Files
+- src/pages/TranslatorPage.jsx — Translator page logic
 
-react-router-dom
+- src/pages/RandomStringPage.jsx — Random string generator logic
 
-RapidAPI (for translation API)
+- src/components/Navbar.jsx — Navigation bar component
 
-Files of Interest
-src/pages/TranslatorPage.jsx — Translator page (uses RapidAPI when configured)
+- public/_redirects — Netlify configuration to handle SPA routing
 
-src/pages/RandomStringPage.jsx — Random string generator (uses useState, useCallback, useEffect)
+# Notes
+- If your chosen RapidAPI translation provider requires a different endpoint or request format, update the fetch URL/body in TranslatorPage.jsx.
 
-src/components/Navbar.jsx — Navigation bar
+- Direct links like /translator or /random work because of the _redirects file in Netlify.
 
-public/_redirects — Netlify SPA routing fix
+- The current RapidAPI key is bundled into the frontend. For production, consider using a Netlify Function to keep it secret.
+
+# Live Demo
+Check it out here: https://text-translation-live.netlify.app/
