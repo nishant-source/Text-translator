@@ -1,31 +1,47 @@
 # My Frontend Project (Translator + Random String)
 
-## Run locally
+This is a small React + Vite project that includes:
 
-1. Install:
-   npm install
+- **Text Translator** — translate text between multiple languages using RapidAPI.
+- **Random String Generator** — generate random strings with configurable length and character set.
 
-2. Create `.env` from `.env.example` and add your RapidAPI key/host:
-   VITE_RAPIDAPI_KEY=...
-   VITE_RAPIDAPI_HOST=...
+You can see it live here: [https://text-translation-live.netlify.app/](https://text-translation-live.netlify.app/)
 
-If you don't set these, the translator runs in demo mode (UI works, but translations are fake).
+---
 
-3. Start:
-   npm run dev
+## Run Locally
 
-## What I used
+1. Clone the repository:
 
-- React (Vite)
-- Tailwind CSS
-- react-router-dom
-- RapidAPI (for translation API)
+```bash
+git clone https://github.com/nishant-source/Text-translator.git
+cd Text-translator
+Install dependencies:
 
-Files of interest:
+npm install
+Create a .env file from .env.example and add your RapidAPI credentials:
 
-- `src/pages/TranslatorPage.jsx` — translator (uses RapidAPI when configured)
-- `src/pages/RandomStringPage.jsx` — uses useState, useCallback, useEffect
+VITE_RAPIDAPI_KEY=your_rapidapi_key_here
+VITE_RAPIDAPI_HOST=text-translator2.p.rapidapi.com
+If you don’t set these, the translator will run in demo mode (UI works, but translations are fake).
 
-## Notes
+Start the development server:
 
-- If your chosen RapidAPI translation provider requires a different endpoint or request shape, update `TranslatorPage.jsx` fetch URL/body accordingly.
+npm run dev
+What I Used
+React (with Vite)
+
+Tailwind CSS
+
+react-router-dom
+
+RapidAPI (for translation API)
+
+Files of Interest
+src/pages/TranslatorPage.jsx — Translator page (uses RapidAPI when configured)
+
+src/pages/RandomStringPage.jsx — Random string generator (uses useState, useCallback, useEffect)
+
+src/components/Navbar.jsx — Navigation bar
+
+public/_redirects — Netlify SPA routing fix
